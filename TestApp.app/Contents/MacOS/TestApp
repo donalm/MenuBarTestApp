@@ -1,5 +1,6 @@
 #!/bin/bash
 
-bindir=$(cd -P -- "$(dirname -- "$0")" && printf '%s\n' "$(pwd -P)")
-script=${bindir}/TestApp.py
+MacOSDir=$(cd -P -- "$(dirname -- "$0")" && printf '%s\n' "$(pwd -P)")
+script=${MacOSDir}/TestApp.py
+export ContentsDir="$(dirname -- "$MacOSDir")"
 exec /opt/miniconda/miniconda3/envs/pyqt5/bin/python $script "$@"
