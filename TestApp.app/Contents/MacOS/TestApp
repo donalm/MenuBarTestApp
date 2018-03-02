@@ -1,0 +1,5 @@
+#!/bin/bash
+
+bindir=$(cd -P -- "$(dirname -- "$0")" && printf '%s\n' "$(pwd -P)")
+script=${bindir}/TestApp.py
+exec /opt/miniconda/miniconda3/envs/pyqt5/bin/python $script "$@"
